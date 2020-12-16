@@ -1,0 +1,35 @@
+h1 {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 100px;
+    margin: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    margin: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    margin: 20px;
+}
+
+ul {
+    font-family: 'Open Sans', sans-serif;
+    margin: 30px;
+}
+
+.randomFood {
+    font-family: 'Open Sans', sans-serif;
+}
+
+div {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    text-align: center;
+}
+
