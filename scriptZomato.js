@@ -1,7 +1,7 @@
 //get geolocation
 
 function getLocation() {
-    if(navigator.geolocation {
+    if(navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(getLatLon);
         } else {
             alert("Geolocation is not supported by this browser.");
@@ -12,7 +12,7 @@ navigator.geolocation.getCurrentPosition(getLatLon);
 function getLatLon(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
-    alert("lat:" + lat + " lng:" + lng);
+    alert("lat:" + lat + " lng:" + lon);
 }
 
 
