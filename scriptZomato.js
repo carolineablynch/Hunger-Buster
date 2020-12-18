@@ -3,6 +3,7 @@
 function getLocation() {
     if(navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(getLatLon);
+console.log("DO YOU WORK")
         } else {
             alert("Geolocation is not supported by this browser.");
         }
@@ -12,19 +13,20 @@ navigator.geolocation.getCurrentPosition(getLatLon);
 function getLatLon(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
+    console.log("DO YOU WORK 2.0")
     alert("lat:" + lat + " lng:" + lon);
 }
 
-
-//Zomato API
+getLocation()
+// Zomato API
 var clicker = $("#runapi")
 var apiUserKey = "50bc727ca203f52062f79dc80e81905e";
 var lat = 40.73;
 var lon = -73.99;
 var cuisinesid = 55;
 
-var getLat = position.coords.latitude;
-var getLon = position.coords.longitude;
+// var getLat = position.coords.latitude;
+// var getLon = position.coords.longitude;
 
 var displayR1 = "#resturantOne";
 var displayR2 = "#resturantTwo";
