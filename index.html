@@ -20,25 +20,25 @@
 <!--Page header-->
 <h1>Hunger Busters</h1>
 <hr></hr>
-<h2>A website designed to cure your hunger by generating photos of delicious food dishes for you to pick from and find you resturants to order that food </h2>
+<h2 class="col s12 m6">A website designed to cure your hunger by generating photos of delicious food dishes for you to pick from and find you resturants to order that food </h2>
 
 <!-- grid system-->
 <div class="container">
   <div class = "row">
-    <div class = "col s6">
+    <div class = "col s12 m6">
     <div class = "uk-card uk-card-default uk-card-body">
       <p>Click the Button Generate a Random Food Dish!</p> 
       <button class="uk-button uk-button-danger" id = "randomFood">Random Food!</button>
     </div> 
   </div>
-  <div class="col s6">
-    <div class = "uk-card uk-card-default uk-card-body"><img src = "https://wp-media.petersons.com/blog/wp-content/uploads/2019/12/31125222/iStock-1125733916-2.jpg" alt= "Random Food Photo" id="foodPhoto" width="500px" height="500px"></div>
+  <div class="col s12 m6">
+    <div class = "uk-card uk-card-default uk-card-body" id="photoStyle"><img src = "https://wp-media.petersons.com/blog/wp-content/uploads/2019/12/31125222/iStock-1125733916-2.jpg" alt= "Random Food Photo" id="foodPhoto"></div>
     
   </div> 
   </div>
 </div>
 <hr></hr>
-<h3>Nearby Resturants to Order #foodPhoto:</h3>
+<h3>Nearby Resturants to Order</h3>
 <ul class="uk-list uk-list-striped" id = "restuantList">
   <li>Placeholder Resturant Data</li>
   <li>Placeholder Resturant Data</li>
@@ -47,7 +47,14 @@
   <li>Placeholder Resturant Data</li>
 </ul>
 
+<footer class="pink lighten-1">     
+    <p class="container">
+    © 2020 Made by Caroline, Alexander, Donnahue, and Fiach
+    </p>
 
+</footer>
+
+<script src="scriptZomato.js"></script>
 </body>
 </html>
 

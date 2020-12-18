@@ -1,35 +1,53 @@
 h1 {
-    font-family: 'Bungee Shade', cursive;
-    font-size: 100px;
-    margin: 20px;
-    text-align: center;
+  font-family: "Bungee Shade", cursive;
+  font-size: 100px;
+  margin: 20px;
+  text-align: center;
 }
 
 h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
-    margin: 20px;
-    text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  margin: 20px;
+  text-align: center;
 }
 
 h3 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
-    margin: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  margin: 20px;
 }
 
 ul {
-    font-family: 'Open Sans', sans-serif;
-    margin: 30px;
+  font-family: "Open Sans", sans-serif;
+  margin: 30px;
 }
 
 .randomFood {
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 div {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 35px;
-    text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 35px;
+  text-align: center;
 }
 
+footer {
+  padding-top: 20px;
+}
+p {
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  body {
+    width: auto;
+    margin: 0 auto;
+  }
+  #foodStyle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+}
