@@ -1,5 +1,5 @@
 
-$("button").on("click", function() {
+$("#randomFood").on("click", function() {
 
     var queryURL = "https://foodish-api.herokuapp.com/api/";
     
@@ -17,11 +17,13 @@ $("button").on("click", function() {
         foodImg.attr("alt", "food image");
         foodImg.attr("class", "ourImg");
 
-        $("#food_result").empty();
-        $("#food_result").append(foodImg);
+        $("#foodphoto1").empty();
+        $("#foodphoto1").append(foodImg);
 
 
     });
 });
+
+
 
 
