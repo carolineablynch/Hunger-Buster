@@ -22,13 +22,10 @@ $("#randomFood").on("click", function() {
 
         if (imageUrl.toString().includes("pizza", 0)) {
             var cuisineType = "Italian"
-            console.log(cuisineType)
         } else if (imageUrl.toString().includes("burger", 0)) {
             var cuisineType = "American"
-            console.log(cuisineType)
         } else {
             var cuisineType = "Indian"
-            console.log(cuisineType)
         }
     });
 });
