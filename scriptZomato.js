@@ -1,3 +1,4 @@
+cuisineType = ""
 function getLocation() {
     if(navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(getLatLon);
@@ -46,6 +47,7 @@ function getRestaurants(){
     })
     .then(function(response){
     console.log(response)
+    console.log(cuisineType)
     //we need to format so that the three elements pulled in from API object have better spacing (maybe make a line break or new div for link)
     displayR1.text((response.restaurants[0].restaurant.name.toString()) + (response.restaurants[0].restaurant.location.address.toString()) + (response.restaurants[0].restaurant.menu_url.toString()))
     displayR2.text((response.restaurants[1].restaurant.name.toString()) + (response.restaurants[1].restaurant.location.address.toString()) + (response.restaurants[1].restaurant.menu_url.toString()))
