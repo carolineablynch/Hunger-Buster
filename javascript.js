@@ -1,4 +1,4 @@
-
+var cuisineType = ""
 $("#randomFood").on("click", function() {
 
     var queryURL = "https://foodish-api.herokuapp.com/api/";
@@ -21,11 +21,11 @@ $("#randomFood").on("click", function() {
         $("#foodphoto1").append(foodImg);
 
         if (imageUrl.toString().includes("pizza", 0)) {
-            var cuisineType = "Italian"
+             cuisineType = "Italian"
         } else if (imageUrl.toString().includes("burger", 0)) {
-            var cuisineType = "American"
+             cuisineType = "American"
         } else {
-            var cuisineType = "Indian"
+             cuisineType = "Indian"
         }
     });
 });
