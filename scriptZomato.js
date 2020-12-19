@@ -16,7 +16,14 @@ function getLatLon(position) {
     var clicker = $("#randomFood")
 
 //This is currently set to be fixed on Italian - see comment below
-var cuisinesid = 55;
+if (cuisineType==="Indian") {
+    var cuisinesid = 148
+} else if (cuisineType==="Italian") {
+    var cuisinesid = 55 
+} else {
+    cusinesid = 1
+}
+ 
 
 //we need to figure out how to pull in these variables from the other function
 // if (cuisineType==="Italian"){
