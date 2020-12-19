@@ -1,9 +1,10 @@
 cuisineType = ""
+cuisinesid = 55
 function getLocation() {
     if(navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(getLatLon);
         } else {
-            alert("Geolocation not supported by browser.");
+            alert("Geolocation not supported by browser.")
         }
     }
 
@@ -16,13 +17,7 @@ function getLatLon(position) {
     var clicker = $("#randomFood")
 
 //This is currently set to be fixed on Italian - see comment below
-if (cuisineType==="Indian") {
-    var cuisinesid = 148
-} else if (cuisineType==="Italian") {
-    var cuisinesid = 55 
-} else {
-    cusinesid = 1
-}
+
  
 
 //we need to figure out how to pull in these variables from the other function
@@ -55,6 +50,13 @@ function getRestaurants(){
     .then(function(response){
     console.log(response)
     console.log(cuisineType)
+    if (cuisineType==="Indian") {
+         cuisinesid = 148
+    } else if (cuisineType==="Italian") {
+         cuisinesid = 55 
+    } else {
+        cusinesid = 1
+    }
     //we need to format so that the three elements pulled in from API object have better spacing (maybe make a line break or new div for link)
     displayR1.text((response.restaurants[0].restaurant.name.toString()) + (response.restaurants[0].restaurant.location.address.toString()) + (response.restaurants[0].restaurant.menu_url.toString()))
     displayR2.text((response.restaurants[1].restaurant.name.toString()) + (response.restaurants[1].restaurant.location.address.toString()) + (response.restaurants[1].restaurant.menu_url.toString()))
