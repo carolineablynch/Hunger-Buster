@@ -1,5 +1,5 @@
-cuisineType = ""
-cuisinesid = 55
+console.log(cuisineType)
+    cuisinesid = "";
 function getLocation() {
     if(navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(getLatLon);
@@ -16,27 +16,30 @@ function getLatLon(position) {
     var lonFormat = lon.toFixed(2)
     var clicker = $("#randomFood")
 
-//This is currently set to be fixed on Italian - see comment below
 
- 
-
-//we need to figure out how to pull in these variables from the other function
-// if (cuisineType==="Italian"){
-//   var cuisinesid=55 
-// } else if (cuisineType==="Indian"){ 
-//   var cuisinesid=99 
-// } else {
-//     var cuisinesid=99    
-//     }
-
-var displayR1 = $("#restaurantOne");
-var displayR2 = $("#restaurantTwo");
-var displayR3 = $("#restaurantThree");
-var displayR4 = $("#restaurantFour");
-var displayR5 = $("#restaurantFive");
+var displayNameR1 = $("#restaurantName1");
+var displayNameR2 = $("#restaurantName2");
+var displayNameR3 = $("#restaurantName3");
+var displayAddressR1 = $("#address1");
+var displayAddressR2 = $("#address2");
+var displayAddressR3 = $("#address3");
+var displayPhoneR1 = $("#phone1");
+var displayPhoneR2 = $("#phone2");
+var displayPhoneR3 = $("#phone3");
 
 
 function getRestaurants(){
+    if (cuisineType==="Indian") {
+        cuisinesid = 148
+    } else if (cuisineType==="Italian") {
+        cuisinesid = 55 
+    } else {
+       cusinesid = 1
+    }
+    
+    console.log(cuisineType)
+    console.log(cuisinesid)
+    
     var urlString = "https://developers.zomato.com/api/v2.1/search?lat=" + latFormat + "&lon=" + lonFormat + "&cuisines=" + cuisinesid
     var apiUserKey = "50bc727ca203f52062f79dc80e81905e";
 
@@ -49,20 +52,18 @@ function getRestaurants(){
     })
     .then(function(response){
     console.log(response)
-    console.log(cuisineType)
-    if (cuisineType==="Indian") {
-         cuisinesid = 148
-    } else if (cuisineType==="Italian") {
-         cuisinesid = 55 
-    } else {
-        cusinesid = 1
-    }
-    //we need to format so that the three elements pulled in from API object have better spacing (maybe make a line break or new div for link)
-    displayR1.text((response.restaurants[0].restaurant.name.toString()) + (response.restaurants[0].restaurant.location.address.toString()) + (response.restaurants[0].restaurant.menu_url.toString()))
-    displayR2.text((response.restaurants[1].restaurant.name.toString()) + (response.restaurants[1].restaurant.location.address.toString()) + (response.restaurants[1].restaurant.menu_url.toString()))
-    displayR3.text((response.restaurants[2].restaurant.name.toString()) + (response.restaurants[2].restaurant.location.address.toString()) + (response.restaurants[2].restaurant.menu_url.toString()))
-    displayR4.text((response.restaurants[3].restaurant.name.toString()) + (response.restaurants[3].restaurant.location.address.toString()) + (response.restaurants[3].restaurant.menu_url.toString()))
-    displayR5.text((response.restaurants[4].restaurant.name.toString()) + (response.restaurants[4].restaurant.location.address.toString()) + (response.restaurants[4].restaurant.menu_url.toString()))
+   
+    displayNameR1.text(response.restaurants[0].restaurant.name.toString())
+    displayNameR2.text(response.restaurants[1].restaurant.name.toString())
+    displayNameR3.text(response.restaurants[2].restaurant.name.toString())
+    displayAddressR1.text(response.restaurants[0].restaurant.location.address.toString())
+    displayAddressR2.text(response.restaurants[1].restaurant.location.address.toString())
+    displayAddressR3.text(response.restaurants[2].restaurant.location.address.toString())
+    displayPhoneR1.text(response.restaurants[0].restaurant.phone_numbers.toString())
+    displayPhoneR2.text(response.restaurants[1].restaurant.phone_numbers.toString())
+    displayPhoneR3.text(response.restaurants[2].restaurant.phone_numbers.toString())
+    
+
 })
 } 
 
