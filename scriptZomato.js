@@ -30,7 +30,8 @@ function getLatLon(position) {
      latFormat = lat.toFixed(2)
      lonFormat = lon.toFixed(2)
 
-
+     localStorage.setItem("lat", JSON.stringify(latFormat));
+     localStorage.setItem("lon", JSON.stringify(lonFormat));
 
 }
 function getRestaurants(){
@@ -67,6 +68,7 @@ function getRestaurants(){
     
 
 })
+
 } 
 
 

@@ -1,4 +1,9 @@
 var cuisineType = ""
+var lastImageArray = (JSON.parse(localStorage.getItem("imageURLArray")))
+var lastImageDisplay = lastImageArray[lastImageArray.length-1]
+$("#photoSize").attr("src", lastImageDisplay)
+
+
 $("#randomFood").on("click", function() {
 
     var queryURL = "https://foodish-api.herokuapp.com/api/";
@@ -36,10 +41,25 @@ $("#randomFood").on("click", function() {
         } else if (cuisineType==="American") {
            cuisinesid = 168
         }
+        
+       //images to local storage
+        var imagesLocalArray = JSON.parse(localStorage.getItem("imageURLArray")) || [];
+        imagesLocalArray.push(imageUrl);
+        localStorage.setItem("imageURLArray", JSON.stringify(imagesLocalArray));
+
+        //cuisineID to local storage
+        var cuisineIDsArray = JSON.parse(localStorage.getItem("cuisineIDsArray")) || [];
+        cuisineIDsArray.push(cuisinesid);
+        localStorage.setItem("cuisineIDsArray", JSON.stringify(cuisineIDsArray));
+        
+
         getRestaurants()
+
+
     });
 });
 
-
+var lastCuisineIDArray = (JSON.parse(localStorage.getItem("cArray")))
+var lastImageDisplay = lastImageArray[lastImageArray.length-1]
 
 
