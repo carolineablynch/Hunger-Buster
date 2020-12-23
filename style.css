@@ -25,6 +25,7 @@ ul {
 
 .randomFood {
   font-family: "Open Sans", sans-serif;
+  color: white;
 }
 
 div {
@@ -52,16 +53,26 @@ p {
     width: 50%;
   }
 }
-
+#randomFood {
+  color: black;
+}
 #photoSize {
   width: 600px;
   height: 400px;
+  padding: 0%;
 }
 
 #emailCard {
   color: white;
 }
-
+.whiteText {
+  color: white;
+}
 footer {
   color: white;
+}
+
+#emailCard {
+  font-family: "Open Sans", sans-serif;
+  background-color: darkred;
 }
