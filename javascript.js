@@ -27,6 +27,15 @@ $("#randomFood").on("click", function() {
         } else {
              cuisineType = "Indian"
         }
+
+        if (cuisineType==="Indian") {
+            cuisinesid = 148
+        } else if (cuisineType==="Italian") {
+            cuisinesid = 55 
+        } else if (cuisineType==="American") {
+           cuisinesid = 168
+        }
+        getRestaurants()
     });
 });
 
