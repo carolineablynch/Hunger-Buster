@@ -77,7 +77,9 @@ document.querySelector(".contact-form").addEventListener("submit", sendEmail)
 function sendEmail(e,email) {
     e.preventDefault()
 
-console.log('ABOUT OT SEND wiht this url', urlToSend)
+    var url = window.location.href;
+
+// console.log('ABOUT OT SEND with this url', url)
 
     Email.send ({
         Host: "smtp.gmail.com",
@@ -85,13 +87,14 @@ console.log('ABOUT OT SEND wiht this url', urlToSend)
         Password: "idnovpgixdjxemev",
         To: $('.email').val(),
         From: 'supreme.pizza.lh@gmail.com',
-        Subject: `Supreme Pizza sent you a message`,
-        Body: `Name: Supreme Pizza <br/> Email: ${email}  URL: ${urlToSend}<br/> Message`
+        Subject: `Hunger Busters Sent Your Results`,
+        Body: `MESSAGE FROM THE HUNGER BUSTERS <br/>Follow the URL Below to Access your FOOOD!<br/>  ${url}  <br/>`
     })
 }
 
 
 getLocation()
+
 
 
 
