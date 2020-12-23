@@ -9,6 +9,10 @@ var displayAddressR3 = $("#address3");
 var displayPhoneR1 = $("#phone1");
 var displayPhoneR2 = $("#phone2");
 var displayPhoneR3 = $("#phone3");
+var displayLinkR1 = $("#menuLink1");
+var displayLinkR2 = $("#menuLink2");
+var displayLinkR3 = $("#menuLink3");
+
 var latFormat = ""
 var lonFormat = ""
     cuisinesid = "";
@@ -20,10 +24,6 @@ navigator.geolocation.getCurrentPosition(getLatLon);
         }
     }
 
-    // clicker.click(function() {
-    //     getRestaurants();
-    //   });
-    
 function getLatLon(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
@@ -61,6 +61,9 @@ function getRestaurants(){
     displayPhoneR1.text(response.restaurants[0].restaurant.phone_numbers.toString())
     displayPhoneR2.text(response.restaurants[1].restaurant.phone_numbers.toString())
     displayPhoneR3.text(response.restaurants[2].restaurant.phone_numbers.toString())
+    displayLinkR1.attr("href", (response.restaurants[0].restaurant.menu_url.toString()))
+    displayLinkR2.attr("href", (response.restaurants[1].restaurant.menu_url.toString()))
+    displayLinkR3.attr("href", (response.restaurants[2].restaurant.menu_url.toString()))
     
 
 })

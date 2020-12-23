@@ -18,7 +18,7 @@
 <body>
 
 <!--Page header-->
-<h1>Hunger Busters</h1>
+<h1 class="">Hunger Busters</h1>
 <hr></hr>
 <h2 class="col s12 m6">A website designed to cure your hunger by generating photos of delicious food dishes for you to pick from and find you restaurants to order that food </h2>
 
@@ -33,7 +33,7 @@
   </div>
   <!--Photo of Foodish Dish-->
   <div id="foodphoto1" class="col s12 m6">
-    <div class = "uk-card uk-card-default uk-card-body" id="photoStyle foodPhoto" ><img src = "https://wp-media.petersons.com/blog/wp-content/uploads/2019/12/31125222/iStock-1125733916-2.jpg" alt= "Random Food Photo"></div>
+    <div class = "uk-card uk-card-default uk-card-body" id="photoStyle foodPhoto" ><img id="photoSize" src = "https://wp-media.petersons.com/blog/wp-content/uploads/2019/12/31125222/iStock-1125733916-2.jpg" alt= "Random Food Photo"></div>
     
   </div> 
   </div>
@@ -47,18 +47,18 @@
                 <img class="uk-border-circle" width="40" height="40" src="https://static.thenounproject.com/png/1422994-200.png">
             </div>
             <div class="uk-width-expand">
-                <h3 class="uk-card-title uk-margin-remove-bottom" id = "restaurantName1">Restaurant Name</h3>
+                <h3 class="uk-card-title uk-margin-remove-bottom" id = "restaurantName1"></h3>
                 <p class="uk-text-meta uk-margin-remove-top"></p>
             </div>
         </div>
     </div>
     <div class="uk-card-body">
-        <p id = "address1">Restaurant Address</p>
+        <p id = "address1"></p>
         <hr></hr>
-        <p id = "phone3">000-000-0000</p>
+        <p id = "phone1"></p>
     </div>  
   <div class="uk-card-footer">
-      <a href="#" class="uk-button uk-button-text">Click here for Menu</a>
+      <a href="#" id="menuLink1" class="uk-button uk-button-text">Click here for Menu</a>
   </div>
     </div>
 
@@ -70,18 +70,18 @@
                 <img class="uk-border-circle" width="40" height="40" src="https://static.thenounproject.com/png/1422994-200.png">
             </div>
             <div class="uk-width-expand">
-                <h3 class="uk-card-title uk-margin-remove-bottom" id = "restaurantName2">Restaurant Name</h3>
+                <h3 class="uk-card-title uk-margin-remove-bottom" id = "restaurantName2"></h3>
                 <p class="uk-text-meta uk-margin-remove-top"></p>
             </div>
         </div>
     </div>
     <div class="uk-card-body">
-        <p id = "address2">Restaurant Address</p>
+        <p id = "address2"></p>
         <hr></hr>
-        <p id = "phone2">000-000-0000</p>
+        <p id = "phone2"></p>
     </div>  
   <div class="uk-card-footer">
-      <a href="#" class="uk-button uk-button-text">Click here for Menu</a>
+      <a href="#" id="menuLink2" class="uk-button uk-button-text">Click here for Menu</a>
   </div>
     </div>
 
@@ -94,27 +94,32 @@
                 <img class="uk-border-circle" width="40" height="40" src="https://static.thenounproject.com/png/1422994-200.png">
             </div>
             <div class="uk-width-expand">
-                <h3 class="uk-card-title uk-margin-remove-bottom" id = "restaurantName3">Restaurant Name</h3>
+                <h3 class="uk-card-title uk-margin-remove-bottom" id = "restaurantName3"></h3>
                 <p class="uk-text-meta uk-margin-remove-top"></p>
             </div>
         </div>
     </div>
     <div class="uk-card-body">
-        <p id = "address3">Restaurant Address</p>
+        <p id = "address3"></p>
         <hr></hr>
-        <p id = "phone1">000-000-0000</p>
+        <p id = "phone3"></p>
     </div>  
   <div class="uk-card-footer">
-      <a href="#" class="uk-button uk-button-text">Click here for Menu</a>
+      <a href="#" id="menuLink3" class="uk-button uk-button-text">Click here for Menu</a>
   </div>
     </div>
 </div>
-<div>
+<div class = "row">
+  <div  class = "uk-card uk-card-default uk-card-body col s12 m6 pink lighten-1" id="emailCard">
+    <p> Enter your email if you want a copy of the restaurants!</p>
+  </div>
+  <div class = "col s12 m6">
   <form method="POST" class="contact-form">
     <label for="">Email</label>
     <input class="email" type="email" placeholder="email" required>
     <button class="uk-button uk-button-danger" type="submit">Send</button>
   </form>
+</div>
   </div>
 </div>
 

@@ -53,7 +53,15 @@ p {
   }
 }
 
-#foodphoto1 {
-  width: 400px;
+#photoSize {
+  width: 600px;
   height: 400px;
+}
+
+#emailCard {
+  color: white;
+}
+
+footer {
+  color: white;
 }

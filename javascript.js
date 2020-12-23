@@ -16,6 +16,7 @@ $("#randomFood").on("click", function() {
         foodImg.attr("src", imageUrl);
         foodImg.attr("alt", "food image");
         foodImg.attr("class", "ourImg");
+        foodImg.attr("id", "photoSize")
 
         $("#foodphoto1").empty();
         $("#foodphoto1").append(foodImg);
