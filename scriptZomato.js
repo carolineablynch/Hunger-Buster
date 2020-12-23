@@ -1,24 +1,5 @@
 var urlToSend = ''
-
-console.log(cuisineType)
-    cuisinesid = "";
-function getLocation() {
-    if(navigator.geolocation) {
-navigator.geolocation.getCurrentPosition(getLatLon);
-        } else {
-            alert("Geolocation not supported by browser.")
-        }
-    }
-
-
-function getLatLon(position) {
-    var lat = position.coords.latitude;
-    var lon = position.coords.longitude;
-    var latFormat = lat.toFixed(2)
-    var lonFormat = lon.toFixed(2)
-    var clicker = $("#randomFood")
-
-
+var clicker = $("#randomFood")
 var displayNameR1 = $("#restaurantName1");
 var displayNameR2 = $("#restaurantName2");
 var displayNameR3 = $("#restaurantName3");
@@ -28,16 +9,32 @@ var displayAddressR3 = $("#address3");
 var displayPhoneR1 = $("#phone1");
 var displayPhoneR2 = $("#phone2");
 var displayPhoneR3 = $("#phone3");
-
-
-function getRestaurants(){
-    if (cuisineType==="Indian") {
-        cuisinesid = 148
-    } else if (cuisineType==="Italian") {
-        cuisinesid = 55 
-    } else {
-       cusinesid = 1
+var latFormat = ""
+var lonFormat = ""
+    cuisinesid = "";
+function getLocation() {
+    if(navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(getLatLon);
+        } else {
+            alert("Geolocation not supported by browser.")
+        }
     }
+
+    // clicker.click(function() {
+    //     getRestaurants();
+    //   });
+    
+function getLatLon(position) {
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+     latFormat = lat.toFixed(2)
+     lonFormat = lon.toFixed(2)
+
+
+
+}
+function getRestaurants(){
+
     
     console.log(cuisineType)
     console.log(cuisinesid)
@@ -69,11 +66,8 @@ function getRestaurants(){
 })
 } 
 
-clicker.click(function() {
-    getRestaurants();
-  });
 
-}
+
 
 document.querySelector(".contact-form").addEventListener("submit", sendEmail)
 

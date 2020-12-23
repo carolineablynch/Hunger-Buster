@@ -52,3 +52,8 @@ p {
     width: 50%;
   }
 }
+
+#foodphoto1 {
+  width: 400px;
+  height: 400px;
+}
