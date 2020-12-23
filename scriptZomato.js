@@ -1,3 +1,5 @@
+var urlToSend = ''
+
 console.log(cuisineType)
     cuisinesid = "";
 function getLocation() {
@@ -71,8 +73,26 @@ clicker.click(function() {
     getRestaurants();
   });
 
-
 }
+
+document.querySelector(".contact-form").addEventListener("submit", sendEmail)
+
+function sendEmail(e,email) {
+    e.preventDefault()
+
+console.log('ABOUT OT SEND wiht this url', urlToSend)
+
+    Email.send ({
+        Host: "smtp.gmail.com",
+        Username: 'supreme.pizza.lh@gmail.com',
+        Password: "idnovpgixdjxemev",
+        To: $('.email').val(),
+        From: 'supreme.pizza.lh@gmail.com',
+        Subject: `Supreme Pizza sent you a message`,
+        Body: `Name: Supreme Pizza <br/> Email: ${email}  URL: ${urlToSend}<br/> Message`
+    })
+}
+
 
 getLocation()
 
