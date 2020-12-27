@@ -38,12 +38,12 @@ function getLatLon(position) {
 }
 
 var latLocal = (JSON.parse(localStorage.getItem("lat")))
-if (latlocal!=null) {
-   var latFormat = latLocal.value() }
+if (latLocal!=null) {
+   var latFormat = latLocal.toString().valueOf() }
 
 var lonLocal = (JSON.parse(localStorage.getItem("lon")))
 if (lonLocal!=null) {
-   var latFormat = latLocal.value() }
+   var lonFormat = lonLocal.toString().valueOf() }
 
 var cusineLocalArray = (JSON.parse(localStorage.getItem("cuisineIDsArray")))
 if (cusineLocalArray!=null) {
