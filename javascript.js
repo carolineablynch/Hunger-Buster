@@ -1,7 +1,12 @@
+
+
 var cuisineType = ""
+
 var lastImageArray = (JSON.parse(localStorage.getItem("imageURLArray")))
+if (lastImageArray!=null) {
 var lastImageDisplay = lastImageArray[lastImageArray.length-1]
-$("#photoSize").attr("src", lastImageDisplay)
+$("#photoSize").attr("src", lastImageDisplay) 
+}
 
 
 $("#randomFood").on("click", function() {
@@ -59,7 +64,9 @@ $("#randomFood").on("click", function() {
     });
 });
 
-var lastCuisineIDArray = (JSON.parse(localStorage.getItem("cArray")))
+var lastCuisineIDArray = (JSON.parse(localStorage.getItem("cuisineIDsArray")))
 var lastImageDisplay = lastImageArray[lastImageArray.length-1]
+
+
 
 

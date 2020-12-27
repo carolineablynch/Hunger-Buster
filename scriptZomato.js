@@ -13,9 +13,11 @@ var displayLinkR1 = $("#menuLink1");
 var displayLinkR2 = $("#menuLink2");
 var displayLinkR3 = $("#menuLink3");
 
-var latFormat = ""
-var lonFormat = ""
-    cuisinesid = "";
+var lat = "";
+var lon = "";
+var latFormat = "";
+var lonFormat = "";
+var cuisinesid = "";
 function getLocation() {
     if(navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(getLatLon);
@@ -34,11 +36,27 @@ function getLatLon(position) {
      localStorage.setItem("lon", JSON.stringify(lonFormat));
 
 }
+
+var latLocal = (JSON.parse(localStorage.getItem("lat")))
+if (latlocal!=null) {
+   var latFormat = latLocal.value() }
+
+var lonLocal = (JSON.parse(localStorage.getItem("lon")))
+if (lonLocal!=null) {
+   var latFormat = latLocal.value() }
+
+var cusineLocalArray = (JSON.parse(localStorage.getItem("cuisineIDsArray")))
+if (cusineLocalArray!=null) {
+var cuisinesid = cusineLocalArray[cusineLocalArray.length-1]
+}
+
+console.log(latFormat)
+console.log(lonFormat)
+console.log(cuisinesid)
+
+
 function getRestaurants(){
 
-    
-    console.log(cuisineType)
-    console.log(cuisinesid)
     
     var urlString = "https://developers.zomato.com/api/v2.1/search?lat=" + latFormat + "&lon=" + lonFormat + "&cuisines=" + cuisinesid
     var apiUserKey = "50bc727ca203f52062f79dc80e81905e";
@@ -98,7 +116,11 @@ function sendEmail(e,email) {
 getLocation()
 
 
-
+if (lastImageArray!=null) {
+    getRestaurants()
+    } else {
+        alert("it's else")
+    }
 
 
 
