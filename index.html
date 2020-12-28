@@ -20,7 +20,7 @@
 <!--Page header-->
 <h1 class="">Hunger Busters</h1>
 <hr></hr>
-<h2 class="col s12 m6">A website designed to cure your hunger by generating photos of delicious food dishes for you to pick from and find you restaurants to order that food </h2>
+<h2 class="col s12 m6">A website designed to cure your hunger and help you try local restaurants. Click the button below to generate a random dish and watch the boxes below populate with restaurants near you!</h2>
 
 <!-- grid system-->
 <div class="container">
@@ -28,7 +28,7 @@
     <div class = "col s12 m6">
     <div id="button1" class = "uk-card uk-card-default uk-card-body">
       <p>Click the Button to Generate a Random Food Dish!</p> 
-      <button class="uk-button uk-button-danger" id = "randomFood">Random Food!</button>
+      <button class="uk-button uk-button-danger" id = "randomFood">Random Food</button>
     </div> 
   </div>
   <!--Photo of Foodish Dish-->
@@ -109,23 +109,24 @@
   </div>
     </div>
 </div>
+<hr></hr>
 <div class = "row">
-  <div  class = "uk-card uk-card-default uk-card-body col s12 m6 pink lighten-1" id="emailCard">
-    <p> Enter your email if you want a copy of the restaurants!</p>
+  <div  class = "uk-card uk-card-default" id="emailCard">
+    <p id="emailRestaurants"> Enter your email below for a copy of your restaurants!</p>
   </div>
   <div class = "col s12 m6">
   <form method="POST" class="contact-form">
     <label for="">Email</label>
     <input class="email" type="email" placeholder="email" required>
-    <button class="uk-button uk-button-danger" type="submit">Send</button>
+    <button class="uk-button" type="submit" id="emailSubmit">Send</button>
   </form>
 </div>
   </div>
 </div>
 
 
-<footer class="pink lighten-1">     
-    <p class="container">
+<footer>     
+    <p class="container" id="footer">
     © 2020 by Caroline, Alexander, Donnahue, and Fiach
     </p>
 
