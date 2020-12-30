@@ -6,4 +6,16 @@ This application was created to help those who never knows what they want to eat
 
 ## Description
 
-This app was created by Caroline Lynch, Fiach McHugh-Hill, Alexander Woolley, and Donnahue George.
+This app was created through the use of Javascript, jQuery, CSS, and two CSS frameworks, Materialize and UiKit. Two of us took control of the Front-End code and the other two took control of the Back-End code.
+
+### Front-End Developers
+
+Caroline and Donnahue worked on the Front-End code. They styled the page using a framework called UiKit. This framework provided all the buttons and the cards that are used in the application. The framework used to grid and organize the page is called Materialize. Materialize provided all the columns and rows for the page to keep the page organized and clean.
+
+### Back-End Developers
+
+Fiach and Alexander worked on the Back-End code. They learned how to use the Foodish and Zomato API. They eached work on seperate API's and created two different script files that would link the scripts to work together. Once they got the API's functioning, they proceeded on working on the local storage to contain the result for the user and working on the email code so the user can recieve a copy of their results to their personal email.
+
+## Application
+
+[Click here](https://carolineablynch.github.io/Hunger-Buster/) to access the application
