@@ -110,6 +110,10 @@ footer {
   font-weight: bolder;
 }
 
+.restStyle {
+  height: 500px;
+}
+
 #emailSubmit {
   font-size: 15px;
   color: white;
