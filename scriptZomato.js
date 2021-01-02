@@ -22,7 +22,7 @@ function getLocation() {
     if(navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(getLatLon);
         } else {
-            alert("Geolocation not supported by browser.")
+
         }
     }
 
@@ -119,7 +119,7 @@ getLocation()
 if (lastImageArray!=null) {
     getRestaurants()
     } else {
-        alert("it's else")
+
     }
 
 
