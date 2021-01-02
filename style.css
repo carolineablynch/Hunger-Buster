@@ -123,9 +123,10 @@ footer {
 
 #emailSubmit {
   font-size: 15px;
-  color: white
+  color: white;
+  background-color: rgb(207, 57, 57); 
 }
 
 #emailSubmit:active {
-  background-color:rgb(207, 57, 57)
+  background-color: red;
 }
