@@ -19,7 +19,6 @@ $("#randomFood").on("click", function() {
     })
 
     .then(function(response) {
-        console.log(response)
         var imageUrl = response.image;
         var foodImg = $("<img>");
         
