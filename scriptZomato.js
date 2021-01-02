@@ -12,6 +12,8 @@ var displayPhoneR3 = $("#phone3");
 var displayLinkR1 = $("#menuLink1");
 var displayLinkR2 = $("#menuLink2");
 var displayLinkR3 = $("#menuLink3");
+var emailUrlObj = ''
+
 
 var lat = "";
 var lon = "";
@@ -68,7 +70,19 @@ function getRestaurants(){
     })
     .then(function(response){
    
-   
+        console.log('URL To send ?????', response.restaurants[0].restaurant.menu_url.toString())
+        emailUrlObj = 
+            {
+                [response.restaurants[0].restaurant.name.toString()]: response.restaurants[0].restaurant.menu_url.toString(),
+           
+                [response.restaurants[1].restaurant.name.toString()]: response.restaurants[1].restaurant.menu_url.toString(),
+          
+                [response.restaurants[2].restaurant.name.toString()]: response.restaurants[2].restaurant.menu_url.toString()
+            }
+        
+        
+     
+        
     displayNameR1.text(response.restaurants[0].restaurant.name.toString())
     displayNameR2.text(response.restaurants[1].restaurant.name.toString())
     displayNameR3.text(response.restaurants[2].restaurant.name.toString())
@@ -96,6 +110,20 @@ function sendEmail(e,email) {
     e.preventDefault()
 
     var url = window.location.href;
+    console.log("OUR URL TO SEND IN EMAIL", emailUrlObj)
+
+
+    var emailUrlText = ''
+
+
+    for (key in emailUrlObj){
+
+       // console.log('TESTTTT NAME AND url test', key + ": " + emailUrlObj[key]);
+       emailUrlText += `<br/> ${key} :   ${emailUrlObj[key]}  <br/>`
+
+    }
+
+    console.log('EMAIL TEXT what doe sit look like right before we add to body of email', emailUrlText)
 
     Email.send ({
         Host: "smtp.gmail.com",
@@ -104,7 +132,7 @@ function sendEmail(e,email) {
         To: $('.email').val(),
         From: 'supreme.pizza.lh@gmail.com',
         Subject: `Hunger Busters Sent Your Results`,
-        Body: `MESSAGE FROM THE HUNGER BUSTERS <br/>Follow the URL Below to Access your FOOOD!<br/>  ${url}  <br/>`
+        Body: `MESSAGE FROM THE HUNGER BUSTERS <br/>Follow the URL Below to Access your FOOOD! ${emailUrlText}`
     })
 }
 
