@@ -117,12 +117,12 @@ footer {
 #emailSubmit {
   font-size: 15px;
   color: white;
+    background-color: rgb(207, 57, 57); 
 }
 
 #emailSubmit:active {
-  background-color: rgb(207, 57, 57);
+  background-color: red;
 }
-
 @media screen and (max-width: 600px) {
   body {
     width: auto;
@@ -140,4 +140,3 @@ footer {
     margin-right: auto;
     width: 50%;
   }
-}
