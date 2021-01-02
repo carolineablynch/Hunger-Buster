@@ -50,9 +50,7 @@ if (cusineLocalArray!=null) {
 var cuisinesid = cusineLocalArray[cusineLocalArray.length-1]
 }
 
-console.log(latFormat)
-console.log(lonFormat)
-console.log(cuisinesid)
+
 
 
 function getRestaurants(){
@@ -69,7 +67,7 @@ function getRestaurants(){
         },
     })
     .then(function(response){
-    console.log(response)
+   
    
     displayNameR1.text(response.restaurants[0].restaurant.name.toString())
     displayNameR2.text(response.restaurants[1].restaurant.name.toString())
@@ -99,8 +97,6 @@ function sendEmail(e,email) {
 
     var url = window.location.href;
 
-// console.log('ABOUT OT SEND with this url', url)
-
     Email.send ({
         Host: "smtp.gmail.com",
         Username: 'supreme.pizza.lh@gmail.com',
@@ -119,6 +115,7 @@ getLocation()
 if (lastImageArray!=null) {
     getRestaurants()
     } else {
+
 
     }
 
