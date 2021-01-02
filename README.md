@@ -19,3 +19,7 @@ Fiach and Alexander worked on the Back-End code. They learned how to use the Foo
 ## Application
 
 [Click here](https://carolineablynch.github.io/Hunger-Buster/) to access the application
+
+## Demo Gif 
+
+![Hunger Buster Demo](Hunger-Buster-Assets/Hunger-buster-2.gif) 
