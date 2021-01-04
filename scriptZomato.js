@@ -131,9 +131,11 @@ function sendEmail(e,email) {
         Password: "idnovpgixdjxemev",
         To: $('.email').val(),
         From: 'supreme.pizza.lh@gmail.com',
-        Subject: `Hunger Busters Sent Your Results`,
-        Body: `MESSAGE FROM THE HUNGER BUSTERS <br/>Follow the URL Below to Access your FOOOD! ${emailUrlText}`
+        Subject: `HUNGER BUSTERS SENT YOU A MESSAGE`,
+        Body: `Follow the links below to access the food which has been chosen for you... <br/> ${emailUrlText}`
     })
+
+    $('.contact-form')[0].reset();
 }
 
 
