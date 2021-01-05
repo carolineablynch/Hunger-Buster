@@ -69,6 +69,7 @@ function getRestaurants(){
         },
     })
     .then(function(response){
+
         
         console.log(response)
 
@@ -109,8 +110,9 @@ function getRestaurants(){
         displayLinkR3.attr("href", (response.restaurants[2].restaurant.menu_url.toString()))
     } else {displayLinkR3.attr("href", (""))}
     
-    
-      emailUrlObj = 
+   
+        emailUrlObj = 
+
             {
                 [response.restaurants[0].restaurant.name.toString()]: response.restaurants[0].restaurant.menu_url.toString(),
            
@@ -132,7 +134,6 @@ function sendEmail(e,email) {
     e.preventDefault()
 
     var url = window.location.href;
-    console.log("OUR URL TO SEND IN EMAIL", emailUrlObj)
 
 
     var emailUrlText = ''
@@ -140,12 +141,10 @@ function sendEmail(e,email) {
 
     for (key in emailUrlObj){
 
-       // console.log('TESTTTT NAME AND url test', key + ": " + emailUrlObj[key]);
        emailUrlText += `<br/> ${key} :   ${emailUrlObj[key]}  <br/>`
 
     }
 
-    console.log('EMAIL TEXT what doe sit look like right before we add to body of email', emailUrlText)
 
     Email.send ({
         Host: "smtp.gmail.com",
