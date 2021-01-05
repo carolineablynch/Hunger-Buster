@@ -69,8 +69,50 @@ function getRestaurants(){
         },
     })
     .then(function(response){
+
+        
+        console.log(response)
+
+    if(response.restaurants.length>0){
+        displayNameR1.text(response.restaurants[0].restaurant.name.toString())
+    } else {displayNameR1.text("")}
+    if(response.restaurants.length>1){
+        displayNameR2.text(response.restaurants[1].restaurant.name.toString())
+    } else {displayNameR2.text("")}
+    if(response.restaurants.length>2){
+        displayNameR3.text(response.restaurants[2].restaurant.name.toString())
+    } else {displayNameR3.text("")}
+    if(response.restaurants.length>0){
+        displayAddressR1.text(response.restaurants[0].restaurant.location.address.toString())
+    } else {displayAddressR1.text("")}
+    if(response.restaurants.length>1){
+        displayAddressR2.text(response.restaurants[1].restaurant.location.address.toString())
+    } else {displayAddressR2.text("")}
+    if(response.restaurants.length>2){
+        displayAddressR3.text(response.restaurants[2].restaurant.location.address.toString())
+    } else {displayAddressR3.text("")}
+    if(response.restaurants.length>0){
+        displayPhoneR1.text(response.restaurants[0].restaurant.phone_numbers.toString())
+    } else {displayPhoneR1.text("")}
+    if(response.restaurants.length>1){
+        displayPhoneR2.text(response.restaurants[1].restaurant.phone_numbers.toString())
+    } else {displayPhoneR2.text("")}
+    if(response.restaurants.length>2){
+        displayPhoneR3.text(response.restaurants[2].restaurant.phone_numbers.toString())
+    } else {displayPhoneR3.text("")}
+    if(response.restaurants.length>0){
+        displayLinkR1.attr("href", (response.restaurants[0].restaurant.menu_url.toString()))
+    } else {displayLinkR1.attr("href", (""))}
+    if(response.restaurants.length>1){
+        displayLinkR2.attr("href", (response.restaurants[1].restaurant.menu_url.toString()))
+    } else {displayLinkR2.attr("href", (""))}
+    if(response.restaurants.length>2){
+        displayLinkR3.attr("href", (response.restaurants[2].restaurant.menu_url.toString()))
+    } else {displayLinkR3.attr("href", (""))}
+    
    
         emailUrlObj = 
+
             {
                 [response.restaurants[0].restaurant.name.toString()]: response.restaurants[0].restaurant.menu_url.toString(),
            
@@ -78,23 +120,6 @@ function getRestaurants(){
           
                 [response.restaurants[2].restaurant.name.toString()]: response.restaurants[2].restaurant.menu_url.toString()
             }
-        
-        
-     
-        
-    displayNameR1.text(response.restaurants[0].restaurant.name.toString())
-    displayNameR2.text(response.restaurants[1].restaurant.name.toString())
-    displayNameR3.text(response.restaurants[2].restaurant.name.toString())
-    displayAddressR1.text(response.restaurants[0].restaurant.location.address.toString())
-    displayAddressR2.text(response.restaurants[1].restaurant.location.address.toString())
-    displayAddressR3.text(response.restaurants[2].restaurant.location.address.toString())
-    displayPhoneR1.text(response.restaurants[0].restaurant.phone_numbers.toString())
-    displayPhoneR2.text(response.restaurants[1].restaurant.phone_numbers.toString())
-    displayPhoneR3.text(response.restaurants[2].restaurant.phone_numbers.toString())
-    displayLinkR1.attr("href", (response.restaurants[0].restaurant.menu_url.toString()))
-    displayLinkR2.attr("href", (response.restaurants[1].restaurant.menu_url.toString()))
-    displayLinkR3.attr("href", (response.restaurants[2].restaurant.menu_url.toString()))
-    
 
 })
 
