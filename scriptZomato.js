@@ -70,9 +70,6 @@ function getRestaurants(){
     })
     .then(function(response){
 
-        
-        console.log(response)
-
     if(response.restaurants.length>0){
         displayNameR1.text(response.restaurants[0].restaurant.name.toString())
     } else {displayNameR1.text("")}
@@ -125,26 +122,19 @@ function getRestaurants(){
 
 } 
 
-
-
-
 document.querySelector(".contact-form").addEventListener("submit", sendEmail)
 
-function sendEmail(e,email) {
+function sendEmail(e) {
+    
     e.preventDefault()
 
-    var url = window.location.href;
-
-
     var emailUrlText = ''
-
 
     for (key in emailUrlObj){
 
        emailUrlText += `<br/> ${key} :   ${emailUrlObj[key]}  <br/>`
 
     }
-
 
     Email.send ({
         Host: "smtp.gmail.com",
