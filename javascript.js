@@ -1,6 +1,7 @@
 
 
 var cuisineType = ""
+var lastImageDisplay = ""
 
 var lastImageArray = (JSON.parse(localStorage.getItem("imageURLArray")))
 if (lastImageArray!=null) {
@@ -61,10 +62,11 @@ $("#randomFood").on("click", function() {
 
 
     });
+    
 });
 
 var lastCuisineIDArray = (JSON.parse(localStorage.getItem("cuisineIDsArray")))
-var lastImageDisplay = lastImageArray[lastImageArray.length-1]
+
 
 
 
